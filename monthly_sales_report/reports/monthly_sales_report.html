@@ -6,16 +6,15 @@
     <style>
         body { font-family: Arial, sans-serif; margin: 40px; }
         h1 { text-align: center; }
-        table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+        .summary { margin-bottom: 40px; }
+        .data-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
         th, td { border: 1px solid #dddddd; text-align: left; padding: 8px; }
         th { background-color: #f2f2f2; }
-        .summary { margin-bottom: 40px; }
-        .chart { text-align: center; }
+        .chart { margin: 20px auto; text-align: center; }
     </style>
 </head>
 <body>
     <h1>Monthly Sales Report</h1>
-    <h2>Sales Summary</h2>
     <div class="summary">
         <table border="1" class="dataframe summary">
   <thead>
@@ -96,9 +95,17 @@
   </tbody>
 </table>
     </div>
+    <div class="chart">
+        <img src="monthly_sales.png" alt="Monthly Sales">
+        <p>Monthly Sales</p>
+    </div>
+    <div class="chart">
+        <img src="monthly_variation.png" alt="Monthly Sales Variation">
+        <p>Monthly Sales Variation</p>
+    </div>
     <h2>Sales Data</h2>
-    <div class="data-table">
-        <table border="1" class="dataframe">
+    <table class="data-table">
+        <table border="1" class="dataframe data-table">
   <thead>
     <tr style="text-align: right;">
       <th>Month</th>
@@ -208,13 +215,6 @@
     </tr>
   </tbody>
 </table>
-    </div>
-    <h2>Sales Visualizations</h2>
-    <div class="chart">
-        <img src="monthly_sales.png" alt="Monthly Sales">
-    </div>
-    <div class="chart">
-        <img src="monthly_variation.png" alt="Monthly Sales Variation">
-    </div>
+    </table>
 </body>
 </html>
