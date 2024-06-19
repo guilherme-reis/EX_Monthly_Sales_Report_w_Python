@@ -4,8 +4,8 @@ from jinja2 import Environment, FileSystemLoader
 def generate_html_report(df, template_path, output_path):
     env = Environment(loader=FileSystemLoader(template_path))
     template = env.get_template('report_template.html')
-    html_out = template.render(table=df.to_html(index=False))
-    
+    html_out = template.render(table=df.to_html(index=False), 
+                               summary=df.describe().to_html(classes='summary'))
     with open(output_path, 'w') as f:
         f.write(html_out)
 
