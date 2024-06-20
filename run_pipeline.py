@@ -1,3 +1,4 @@
+import os
 import subprocess
 
 def run_script(script_name):
@@ -12,9 +13,14 @@ def run_script(script_name):
     print(f"Finished running {script_name}.\n")
 
 def main():
-    scripts = ['monthly_sales_report/scripts/data_processing.py', 'monthly_sales_report/scripts/visualization.py', 'monthly_sales_report/scripts/generate_report.py']
-    for script in scripts:
-        run_script(script)
+
+    if not os.path.exists('monthly_sales_report/data/sales_data.csv'):
+        run_script('monthly_sales_report/scripts/create_csv_files.py')
+        main()   
+    else:
+        scripts = ['monthly_sales_report/scripts/data_processing.py', 'monthly_sales_report/scripts/visualization.py', 'monthly_sales_report/scripts/generate_report.py']
+        for script in scripts:
+            run_script(script)
 
 if __name__ == "__main__":
     main()
