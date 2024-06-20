@@ -13,7 +13,7 @@ This project generates a monthly sales report from sales and product data. The r
 
 1. Ensure you have Python 3.6 or later installed.
 2. Install the required packages with `pip install -r requirements.txt`.
-3. Run the script with `python scripts/generate_report.py`.
+3. Run the script with `python run_pipeline.py`.
 
 ## Report Details
 
