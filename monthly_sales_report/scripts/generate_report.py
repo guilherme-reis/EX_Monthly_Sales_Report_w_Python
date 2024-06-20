@@ -25,7 +25,7 @@ def generate_html_report(df, template_path, output_path, report_dir):
     HTML(output_path).write_pdf(output_path.replace('.html', '.pdf'))
 
 def generate_plots(df, report_dir):
-    plt.figure(figsize=(15, 10))
+    plt.figure(figsize=(8, 6))  # Adjust the size here
     plt.plot(df['Month'], df['Revenue'], marker='o', color='b', label='Revenue')
     plt.title('Monthly Sales')
     plt.xlabel('Month')
@@ -36,7 +36,7 @@ def generate_plots(df, report_dir):
     plt.savefig(sales_plot_filename)
     plt.close()
 
-    plt.figure(figsize=(15, 10))
+    plt.figure(figsize=(8, 6))  # Adjust the size here
     plt.bar(df['Month'], df['Variation'], color='g', label='Variation (%)')
     plt.title('Monthly Sales Variation')
     plt.xlabel('Month')

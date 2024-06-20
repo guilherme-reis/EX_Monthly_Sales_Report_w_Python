@@ -1,22 +1,38 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Monthly Sales Report</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
+            padding: 1em;
+            max-width: 960px;
+            margin: auto;
         }
+
+        h1, h2 {
+            text-align: center;
+        }
+
         .summary {
             width: 100%;
             border-collapse: collapse;
+            margin: 1em auto;
         }
-        .summary th, .summary td {
+
+        .summary th,
+        .summary td {
             border: 1px solid #ddd;
             padding: 8px;
+            text-align: center;
         }
+
         .summary tr:nth-child(even) {
             background-color: #f2f2f2;
         }
+
         .summary th {
             padding-top: 12px;
             padding-bottom: 12px;
@@ -24,14 +40,15 @@
             background-color: #4CAF50;
             color: white;
         }
+
         img {
             display: block;
-            margin-left: auto;
-            margin-right: auto;
-            width: 50%;
+            margin: 1em auto;
+            width: 80%;
         }
     </style>
 </head>
+
 <body>
     <h1>Monthly Sales Report</h1>
     <h2>Summary Statistics</h2>
@@ -41,4 +58,5 @@
     <h2>Monthly Sales Variation</h2>
     <img src="{{ variation_plot_path }}" alt="Monthly Sales Variation Plot">
 </body>
+
 </html>
